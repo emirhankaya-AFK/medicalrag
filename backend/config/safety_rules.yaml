@@ -1,0 +1,22 @@
+pii_redaction:
+  enabled: true
+  fields_to_redact:
+    - "name"
+    - "dob"
+    - "ssn"
+    - "phone"
+    - "address"
+  replacement: "[REDACTED]"
+
+safety_rules:
+  - id: "no_diagnostic_advice"
+    rule: "Do not provide diagnostic opinions or suggest treatments that are not documented in the medical records."
+    block_phrase: "Please consult a healthcare professional for diagnosis or treatment plans."
+    
+  - id: "hipaa_compliance"
+    rule: "Do not display complete social security numbers, unencrypted passwords, or raw billing keys."
+    block_phrase: "Unauthorized access or restricted HIPAA data blocked."
+    
+  - id: "interaction_warning"
+    rule: "Always include a medical disclaimer when answering questions related to drug combinations or medications."
+    disclaimer: "Disclaimer: This information is for educational purposes and is not a substitute for clinical advice."
