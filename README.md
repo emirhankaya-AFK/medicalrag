@@ -1,5 +1,7 @@
 # MedicalRAG - Secure Clinical Assistant
 
+[English](README.md) | [Türkçe](README_TR.md)
+
 MedicalRAG is a secure, HIPAA-conscious health records parser and question-answering assistant.
 
 ## Legal Disclaimer
